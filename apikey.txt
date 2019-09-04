@@ -1,0 +1,5 @@
+Key:
+88d96defa0c538ff574854cd43a540c1
+
+Secret:
+b3a7ffb885ec209b
