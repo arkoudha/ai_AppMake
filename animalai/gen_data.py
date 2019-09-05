@@ -19,7 +19,7 @@ for index, classlabel in enumerate(classes):
         image = Image.open(file)    #ファイルを開く
         image = image.convert("RGB")    #RGB値に変換
         image = image.resize((image_size, image_size))  #冒頭で定義したimage_sizeにリサイズ
-        data = np.asarray(image)
+        data = np.asarray(image)    #np.array形式に変換
         X.append(data)
         Y.append(index)
 

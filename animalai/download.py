@@ -4,17 +4,16 @@ from pprint import pprint
 import os, time, sys
 
 #APIキーの情報
-
 key = "88d96defa0c538ff574854cd43a540c1"
 secret = "b3a7ffb885ec209b"
 wait_time = 1    #わざと間隔をあけてあげないとスパムと誤認識されてしまう
 
 #保存フォルダの指定
-animalname = sys.argv[1]
-savedir = "./" + animalname
+animalname = sys.argv[1]    #コマンドライン引数で指定
+savedir = "./" + animalname #コマンドライン引数で指定した名前のフォルダを保存用とする
 
 
-flickr = FlickrAPI(key, secret, format='parsed-json')
+flickr = FlickrAPI(key, secret, format='parsed-json') #jsonファイルをパースする
 result = flickr.photos.search(
     text = animalname,  #取得したい画像名
     per_page = 400,     #取得するデータ数(※外れ値も考えて多めに取得)
